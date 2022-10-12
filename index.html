@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-signin-client_id" content="955957486823-sgq10i2kqu0ejf2gtmpk79j7q2ucc2d1.apps.googleusercontent.com">
     <link rel="stylesheet" href="./index.css">
     <title>Loan Me</title>
 </head>
@@ -26,9 +27,10 @@
         </div>
         <div class="buttons">
             <button class="interest">Earn 14% interest</button>
-            <button type="button" class="login-with-google-btn" >
+            <button type="button" class="login-with-google-btn">
                 Sign in with Google
               </button>
+              <div class="g-signin2" data-onsuccess="onSignIn"></div>
             
         </div>
 
