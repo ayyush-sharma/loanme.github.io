@@ -5,8 +5,8 @@ function onSignIn(googleUser) {
     $("#image").attr('src', profile.getImageUrl());
     $(".data").css("display", "block");
     $(".g-signin2").css("display", "none");
-    if(profile.getName){
-          window.location.href = "https://www.w3schools.com/js/"
+    if(profile.getName!=NULL){
+          location.replace = ("https://www.w3schools.com/js/");
         }
 }
 
