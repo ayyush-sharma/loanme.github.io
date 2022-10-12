@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500;600&display=swap');
+
+body{
+    margin: 0px;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: black;
+}
+.info{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-left: 44px;
+    margin-top: 47px;
+
+}
+.imgdiv{
+display: flex;
+justify-content: center;
+align-items: center;
+margin-right: 17px;
+}
+#profile{
+    display: block;
+    width: 40px;
+    height: 40px;
+}
+#txt{
+    color: white;
+    padding: 0px;
+    margin: 0px;
+    font-family: Roboto;
+font-size: 15px;
+font-weight: 200;
+line-height: 18px;
+letter-spacing: 0.04em;
+text-align: left;
+
+}
+#name{
+    color: white;
+    padding: 0px;
+    margin: 0px;
+    font-family: Roboto;
+font-size: 22px;
+font-weight: 600;
+line-height: 26px;
+letter-spacing: 0.04em;
+text-align: left;
+
+}
+
+.totalbal,.intbal{
+    display: flex;
+    flex-direction: column;
+    margin: 30px 27px 15px 27px;
+    background: #D9D9D926;
+border-radius: 15px;
+padding: 14px 18px;
+}
+
+
+#daychange{
+    font-family: Montserrat;
+font-size: 18px;
+font-weight: 400;
+line-height: 17px;
+letter-spacing: 0.04em;
+text-align: left;
+color: #F9B19A;
+margin: 0px;
+
+
+}
+
+#totalbal{
+    font-family: Open Sans;
+font-size: 43px;
+font-weight: 600;
+line-height: 65px;
+letter-spacing: 0.04em;
+text-align: left;
+color: white;
+margin: 0px;
+}
+#totintline{
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0.04em;
+    text-align: left;
+    color: #F9B19A;
+    margin: 0px;
+    
+}
+#totalint{
+    font-family: Open Sans;
+font-size: 33px;
+font-weight: 600;
+line-height: 65px;
+letter-spacing: 0.04em;
+text-align: left;
+color: white;
+margin: 0px;
+}
+.actions{
+    display: flex;
+    
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 72px;
+}
+.actionrow{
+    display: flex;
+    flex-direction: row;
+}
+.actionbtn{
+width: 50%;
+height: 12vh;
+background: #F8F4E5;
+border-radius: 15px;
+margin: 9px;
+display: flex;
+flex-direction: row;
+display: flex;
+justify-content: space-around;
+padding: 0px 8px;
+}
+.addfunds{
+    display: block;
+    width: auto;
+    display: flex;
+    text-align: center;
+    align-items: end;
+    margin-top: 0px;
+    margin-bottom: 15px;
+}
+#withdraw{
+    background: #D8D5F6;
+
+}
+.funds{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 15px;
+    line-height: 16px;
+    letter-spacing: 0.04em;
+    display: flex;
+    align-items: end;
+   
+    color: #000000;
+    
+}
+#transact{
+    background: #FE8C49;
+    color: white;
+
+}
+#contact{
+    background: #4A58C9;
+color: white;
+}
