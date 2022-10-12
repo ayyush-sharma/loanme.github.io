@@ -5,6 +5,9 @@ function onSignIn(googleUser) {
     $("#image").attr('src', profile.getImageUrl());
     $(".data").css("display", "block");
     $(".g-signin2").css("display", "none");
+    if(profile.getName){
+          window.location.href = "https://www.w3schools.com/js/"
+        }
 }
 
 function signOut() {
