@@ -1,17 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google-signin-client_id" content="955957486823-sgq10i2kqu0ejf2gtmpk79j7q2ucc2d1.apps.googleusercontent.com">
     <link rel="stylesheet" href="./index.css">
     <title>Loan Me</title>
 </head>
+
 <body>
-    <div class="main">
+    <!-- Homepage Final -->
+    <div class="main2" id="homepage">
+
+        <div class="info">
+            <div class="imgdiv"><img id="profile" src="google.png" alt="" width="15%"></div>
+
+            <div class="protext">
+                <p id="txt"> Welcome Back!</p>
+                <p id="name">Ayush Sharma</p>
+            </div>
+        </div>
+        <div class="totalbal">
+            <p id="daychange"> +426</p>
+            <p id="totalbal"> ₹44,000</p>
+        </div>
+        <div class="intbal">
+            <p id="totintline"> Total Interest</p>
+            <p id="totalint"> ₹4400</p>
+        </div>
+
+        <div class="actions">
+            <div class="actionrow">
+                <div id="add" class="actionbtn">
+                    <p class="funds">Add Funds</p>
+                    <img class="addfunds" src="addmoney.webp" width="24%" alt="">
+                </div>
+                <div id="withdraw" class="actionbtn">
+                    <p class="funds">Withdraw</p>
+                    <img class="addfunds" src="withdraw.webp" width="24%" alt="">
+                </div>
+            </div>
+
+            <div class="actionrow">
+                <div id="transact" class="actionbtn">
+                    <p class="funds">Transactions</p>
+                    <img class="addfunds" src="trans-cutout.png" width="14%" alt="">
+                </div>
+                <div id="contact" class="actionbtn">
+                    <p style="
+                color: white;
+            " class="funds">Contact us</p>
+                    <img class="addfunds" src="contact us.webp" width="24%" alt="">
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <!-- Landing Page 1 -->
+
+
+
+    <div class="main" id="landingpage">
         <div class="title">
-            <img id="icon" src="loa.png" alt="icon" width="17%" >
+            <img id="icon" src="/AS-05102022-lm/asset/loa.png" alt="icon" width="17%">
             <span class="titlename">Loan Me</span>
         </div>
         <div class="heading">
@@ -23,15 +79,16 @@
             </p>
         </div>
         <div class="restimg">
-            <img id="" src="resting.jpg" alt="Sorry internet issue" width="100%">
+            <img id="" src="/AS-05102022-lm/asset/resting.jpg" alt="" width="100%">
         </div>
         <div class="buttons">
             <button class="interest">Earn 14% interest</button>
-<!--             <button type="button" class="login-with-google-btn" data-onsuccess="onSignIn">
+            <!-- <button type="button" class="login-with-google-btn" >
                 Sign in with Google
               </button> -->
-              <div class="g-signin2" data-onsuccess="onSignIn"></div>
-            
+
+            <div class="g-signin2" data-onsuccess="onSignIn"></div>
+
         </div>
 
 
@@ -40,7 +97,6 @@
 
 
     </div>
-    <script src="index.js" async defer></script>
-    <script src="https://apis.google.com/js/platform.js" async defer></script>
 </body>
+
 </html>
