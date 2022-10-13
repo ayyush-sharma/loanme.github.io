@@ -1,15 +1,8 @@
 function onSignIn(googleUser) {
     var profile = googleUser.getBasicProfile();
-    $("#name").text(profile.getName());
-    $("#email").text(profile.getEmail());
-    $("#image").attr('src', profile.getImageUrl());
-    $(".main2").css("display", "flex");
     $(".main").css("display", "none");
     $(".g-signin2").css("display", "none");
     
-        // if(profile.getName){
-        //   window.location.href = "https://www.w3schools.com/js/"
-        // }
 }
 
 function signOut() {
