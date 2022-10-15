@@ -94,7 +94,8 @@ var firebaseConfig = {
   
       // DOne
     //   alert('User Logged In!!')
-    window.location.href = "https://ayyush-sharma.github.io/loanmehomepage.github.io/";
+        window.location.replace('https://ayyush-sharma.github.io/loanmehomepage.github.io');
+//     window.location.href = "https://ayyush-sharma.github.io/loanmehomepage.github.io/";
   
     })
     .catch(function(error) {
