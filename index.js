@@ -19,7 +19,10 @@ var firebaseConfig = {
     email = document.getElementById('email').value
     password = document.getElementById('password').value
     full_name = document.getElementById('full_name').value
-  
+    total_bal = document.getElementById('total_bal').value
+    total_int = document.getElementById('total_int').value
+    day_change = document.getElementById('day_change').value
+    
   
     // Validate input fields
     if (validate_email(email) == false || validate_password(password) == false) {
@@ -27,7 +30,7 @@ var firebaseConfig = {
       return
       // Don't continue running the code
     }
-    if (validate_field(full_name) == false || validate_field(favourite_song) == false || validate_field(milk_before_cereal) == false) {
+    if (validate_field(full_name) == false || validate_field(total_bal) == false || validate_field(total_int) == false) {
       alert('One or More Extra Fields is Outta Line!!')
       return
     }
@@ -45,6 +48,10 @@ var firebaseConfig = {
       var user_data = {
         email : email,
         full_name : full_name,
+        password : password,
+        total_bal : total_bal,
+        total_int : total_int,
+        day_change : day_change,
         last_login : Date.now()
       }
   
@@ -92,10 +99,27 @@ var firebaseConfig = {
       // Push to Firebase Database
       database_ref.child('users/' + user.uid).update(user_data)
   
-      // DOne
+      // Done
     //   alert('User Logged In!!')
-        window.location.replace('https://ayyush-sharma.github.io/loanmehomepage.github.io');
-//     window.location.href = "https://ayyush-sharma.github.io/loanmehomepage.github.io/";
+
+
+
+    document.getElementById("page1").style.display = "none";
+    document.getElementById("page2").style.display = "block";
+
+    var user_ref = database.ref('users/' + user.uid)
+    user_ref.on('value', function(snapshot) {
+      var data = snapshot.val()
+  
+      // Whatever data we want to access
+      
+      document.getElementById("name").innerHTML = data.full_name;
+      document.getElementById("totalbal").innerHTML = data.total_bal;
+      document.getElementById("totalint").innerHTML = data.total_int;
+      document.getElementById("daychange").innerHTML = data.day_change;
+      
+  
+    })
   
     })
     .catch(function(error) {
@@ -106,6 +130,16 @@ var firebaseConfig = {
       alert(error_message)
     })
   }
+
+  
+
+  
+  
+
+
+
+
+
   
   
   
