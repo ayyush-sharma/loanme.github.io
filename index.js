@@ -105,8 +105,8 @@ var firebaseConfig = {
 
 
     document.getElementById("page1").style.display = "none";
-    document.getElementById("page2").style.display = "block";
-
+//     document.getElementById("page2").style.display = "block";
+ $("#page2").css("display", "flex");
     var user_ref = database.ref('users/' + user.uid)
     user_ref.on('value', function(snapshot) {
       var data = snapshot.val()
