@@ -107,7 +107,7 @@
 
     <div class="actions">
         <div class="actionrow">
-            <div id="add" class="actionbtn">
+            <div id="add" class="actionbtn" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 <p class="funds">Add Funds</p>
                 <img class="addfunds" src="addmoney.webp" width="24%" alt="">
             </div>
@@ -132,6 +132,41 @@
         </div>
         
     </div>
+        
+        
+         <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                
+                <!-- Add Money Page -->
+                
+                    <div class="addmoney">
+                       <div class="Scancode">
+                        <span class="codehead"> Scan This Qr Code </span>
+                       </div>
+                            <img src="paymentQR.png" alt="qr code" width="100%" style="display: block;">
+                        
+                            <div class="Scancode">
+                                <span class="codehead"> 8178795742@ybl </span>
+                               </div>
+                    </div>
+                   
+                
+                <!-- It ends Here -->
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+        
+        
+        
     
 </div>
     
