@@ -202,7 +202,83 @@
             </div>
         </div>
     </div>
-        
+        <!--  Modal --> -->
+    <div class="modal fade" id="Modalwith" tabindex="-1" aria-labelledby="ModalwithLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                
+                <!-- withdrawal Page -->
+                
+                    <div class="withdrawal">
+                       <div class="imgwith">
+                        <img src="withdraw.webp" width="75%" alt="">
+                       </div>
+                       <div class="titlewith">
+                        <p class="heading">Withdraw</p>
+                       </div>
+                       <div class="balavl">
+                        <p id="avlbal">Available Balance</p>
+                        <p id="totabal"></p>
+                       </div>
+                            <div class="form" id="forminputamount">
+                                <input type="number" required placeholder="Enter Amount to Withdraw" id="amount" autocomplete="off" />
+                                <button class="btn btn-primary" onclick="updates()" id="sendbal">Submit</button>
+                                <p id="paymentline">UPI Payment will be done within 24 hour</p>
+                            </div>
+                            
+                        
+                        
+                    </div>
+                
+                <!-- It ends Here -->
+
+
+                <div class="modal-footer">
+                    <button style="
+                    display: flex;
+                    justify-content: center;
+                " type="button" class="btn btn-secondary" data-bs-dismiss="modal">Go Back</button>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <button id="submitbtn" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Modalsubmit">
+        Submit
+    </button>
+
+    <!-- Submit Modal -->
+    <div class="modal fade" id="Modalsubmit" tabindex="-1" aria-labelledby="ModalsubmitLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                
+                <!-- Submit Page -->
+                
+                    <div class="requestsent">
+                       <img src="success.webp" width="70%" alt="">
+                        <div class="headsent">
+                            <p class="sentline">Request Sent</p>
+                            <p class="upi">UPI Payment will be done within 24 hour</p>
+                        </div>
+                        
+                    </div>
+                
+                <!-- It ends Here -->
+
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Go Back</button>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
         
         
     
