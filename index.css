@@ -455,7 +455,7 @@ letter-spacing: 0em;
 text-align: center;
 
 }
-.submitbtn{
-    display: hidden;
+#submitbtn{
+    display: none;
 }
 
