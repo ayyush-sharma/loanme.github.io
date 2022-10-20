@@ -13,6 +13,8 @@ firebase.initializeApp(firebaseConfig);
 const auth = firebase.auth()
 const database = firebase.database()
 
+var storeuid;
+
 // Set up our register function
 function register () {
   // Get all our input fields
@@ -22,7 +24,7 @@ function register () {
   total_bal =0
   total_int =0
   day_change =0
-  
+   amount =0
 
   // Validate input fields
   if (validate_email(signup_email) == false || validate_password(signup_password) == false) {
@@ -52,6 +54,7 @@ function register () {
       total_bal : total_bal,
       total_int : total_int,
       day_change : day_change,
+      amount : amount,
       last_login : Date.now()
     }
 
@@ -139,7 +142,22 @@ function login () {
 
 
 
+// adding Money to be withdrawn by user
+// storeuid variable stores user id of whose user to be updated
+function updates () {
+  
+  var database_ref = database.ref()
+  var user_ref = database.ref('users/' + storeuid.uid)
+  // Create User data
+  var user_data = {
+    amount : document.getElementById('amount').value
+  }
 
+  // Push to Firebase Database
+  database_ref.child('users/' + storeuid.uid).update(user_data)
+  document.getElementById("submitbtn").click();
+
+}
 
 
 
