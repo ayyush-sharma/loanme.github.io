@@ -13,9 +13,15 @@ firebase.initializeApp(firebaseConfig);
 const auth = firebase.auth()
 const database = firebase.database()
 
+
 var storeuid;
 
+
+
+
 // Set up our register function
+
+
 function register () {
   // Get all our input fields
   signup_email = document.getElementById('signup_email').value
@@ -24,7 +30,8 @@ function register () {
   total_bal =0
   total_int =0
   day_change =0
-   amount =0
+  amount =0
+  
 
   // Validate input fields
   if (validate_email(signup_email) == false || validate_password(signup_password) == false) {
@@ -63,7 +70,6 @@ function register () {
 
     // DOne
     alert('User Created!!')
-document.getElementById("triggersignupclose").click();
   })
   .catch(function(error) {
     // Firebase will use this to alert of its errors
@@ -73,6 +79,13 @@ document.getElementById("triggersignupclose").click();
     alert(error_message)
   })
 }
+
+
+
+
+
+
+
 
 // Set up our login function
 function login () {
@@ -91,10 +104,10 @@ function login () {
   .then(function() {
     // Declare user variable
     var user = auth.currentUser
-
+    
     // Add this user to Firebase Database
     var database_ref = database.ref()
-
+    storeuid = user
     // Create User data
     var user_data = {
       last_login : Date.now()
@@ -109,7 +122,6 @@ function login () {
 
 
   document.getElementById("page1").style.display = "none";
-  // document.getElementById("page2").style.display = "block";
   $("#page2").css("display", "flex");
   document.getElementById("triggerloginclose").click();
 
@@ -122,9 +134,11 @@ function login () {
     
     document.getElementById("name").innerHTML = data.full_name;
     document.getElementById("totalbal").innerHTML = data.total_bal;
+    document.getElementById("totabal").innerHTML = data.total_bal;
     document.getElementById("totalint").innerHTML = data.total_int;
     document.getElementById("daychange").innerHTML = data.day_change;
-    
+
+ 
 
   })
 
@@ -137,8 +151,6 @@ function login () {
     alert(error_message)
   })
 }
-
-
 
 
 
