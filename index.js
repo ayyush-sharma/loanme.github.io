@@ -107,6 +107,8 @@ function login () {
   document.getElementById("page1").style.display = "none";
   // document.getElementById("page2").style.display = "block";
   $("#page2").css("display", "flex");
+  document.getElementById("triggerloginclose").click();
+
 
   var user_ref = database.ref('users/' + user.uid)
   user_ref.on('value', function(snapshot) {
