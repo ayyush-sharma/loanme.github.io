@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500;600&display=swap');
 
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,500;0,600;0,700;1,100;1,200;1,300&display=swap');
 
 
 .main{
@@ -375,5 +380,82 @@ color: white;
     font-size: 30px;
     font-weight: 600;
     font-family: poppins;
+}
+
+/* Here is new css code for withdraw button */
+.imgwith{
+    display: flex;
+    justify-content: center;
+}
+.heading{
+    font-size: 40px;
+    text-align: center;
+    font-weight: 600;
+}
+#avlbal{
+    margin-top: 10%;
+    font-size: 19px;
+    font-family: poppins;
+    text-align: center;
+}
+.inputbal{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+}
+.modal-footer{
+    display: flex;
+    justify-content: center;
+}
+.balavl{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#totabal{
+    font-size: 56px;
+font-weight: 600;
+line-height: 65px;
+letter-spacing: 0.04em;
+text-align: left;
+color: black;
+margin: 0px;
+font-family: poppins;
+}
+#forminputamount{
+    border-radius: 5px;
+    height: 25vh;
+    background-color: #ffffff;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@100;400;600;700;800&family=Open+Sans:wght@300;500;600&display=swap');
+
+.requestsent{
+    display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+border: none;
+}
+.headsent{
+    text-align: center;
+}
+.sentline{
+    font-family: Catamaran;
+font-size: 44px;
+font-weight: 700;
+line-height: 72px;
+letter-spacing: 0em;
+text-align: center;
+
+}
+.submitbtn{
+    display: hidden;
 }
 
