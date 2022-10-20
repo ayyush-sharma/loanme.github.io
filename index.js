@@ -60,6 +60,7 @@ function register () {
 
     // DOne
     alert('User Created!!')
+document.getElementById("triggersignupclose").click();
   })
   .catch(function(error) {
     // Firebase will use this to alert of its errors
