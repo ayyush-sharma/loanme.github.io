@@ -208,7 +208,7 @@
     </div>
 
 
-    <!--  Modal --> -->
+   <!--  Modal --> -->
     <div class="modal fade" id="Modalwith" tabindex="-1" aria-labelledby="ModalwithLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -218,7 +218,7 @@
                 
                     <div class="withdrawal">
                        <div class="imgwith">
-                        <img src="withdraw.webp" width="65%" alt="">
+                        <img src="withdraw.webp" width="75%" alt="">
                        </div>
                        <div class="titlewith">
                         <p class="heading2">Withdraw</p>
@@ -229,7 +229,18 @@
                        </div>
                             <div class="form" id="forminputamount">
                                 <input type="number" required placeholder="Enter Amount to Withdraw" id="amount" autocomplete="off" />
-                                <button class="btn btn-primary" onclick="updates()" id="sendbal">Submit</button>
+                                <div class="btns" style="
+                                display: flex;
+                                justify-content: space-between;
+                                width: 100%;
+                            ">
+                                    <button class="btn btn-primary" onclick="updates()" id="sendbal" style="padding-left: 25%;padding-right: 23%;">Submit</button>
+                                    <button class="btn btn-primary"  id="closebal" data-bs-dismiss="modal" style="
+                                    margin-left: 22px;
+                                    background: crimson;
+                                ">Cancel</button>
+                                </div>
+                                
                                 <p id="paymentline">UPI Payment will be done within 24 hour</p>
                             </div>
                             
@@ -240,18 +251,17 @@
                 <!-- It ends Here -->
 
 
-                <div class="modal-footer">
+                <!-- <div class="modal-footer">
                     <button style="
                     display: flex;
                     justify-content: center;
                 " type="button" class="btn btn-secondary" data-bs-dismiss="modal">Go Back</button>
 
-                </div>
+                </div> -->
 
             </div>
         </div>
     </div>
-
 
     <button id="submitbtn" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Modalsubmit">
         Submit
