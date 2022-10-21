@@ -387,10 +387,15 @@ color: white;
     display: flex;
     justify-content: center;
 }
-.heading{
+.heading2{
     font-size: 40px;
     text-align: center;
     font-weight: 600;
+    margin-top:0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 #avlbal{
     margin-top: 10%;
