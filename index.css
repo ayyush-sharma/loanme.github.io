@@ -398,7 +398,7 @@ color: white;
     align-items: center;
 }
 #avlbal{
-    margin-top: 10%;
+    margin-top: 1%;
     font-size: 19px;
     font-family: poppins;
     text-align: center;
@@ -422,7 +422,7 @@ color: white;
 #totabal{
     font-size: 56px;
 font-weight: 600;
-line-height: 65px;
+line-height: 34px;
 letter-spacing: 0.04em;
 text-align: left;
 color: black;
