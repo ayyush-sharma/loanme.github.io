@@ -15,9 +15,18 @@ const database = firebase.database()
 
 
 var storeuid;
+var datelogin;
+
+// Calculate milliseconds in a year
+const minute = 1000 * 60;
+const hour = minute * 60;
+const day = hour * 24;
+const year = day * 365;
 
 
-
+var total_bal =0
+var total_int =0
+var day_change =0
 
 // Set up our register function
 
@@ -27,9 +36,7 @@ function register () {
   signup_email = document.getElementById('signup_email').value
   signup_password = document.getElementById('signup_password').value
   signup_name = document.getElementById('signup_name').value
-  total_bal =0
-  total_int =0
-  day_change =0
+
   amount =0
   
 
@@ -108,13 +115,8 @@ function login () {
     // Add this user to Firebase Database
     var database_ref = database.ref()
     storeuid = user
-    // Create User data
-    var user_data = {
-      last_login : Date.now()
-    }
-
-    // Push to Firebase Database
-    database_ref.child('users/' + user.uid).update(user_data)
+   
+    
 
     // Done
   //   alert('User Logged In!!')
@@ -137,19 +139,49 @@ function login () {
     document.getElementById("totabal").innerHTML = data.total_bal;
     document.getElementById("totalint").innerHTML = data.total_int;
     document.getElementById("daychange").innerHTML = data.day_change;
+    datelogin = data.last_login;
+    total_bal =data.total_bal;
+    total_int =data.total_int;
 
- 
 
-  })
 
-  })
-  .catch(function(error) {
-    // Firebase will use this to alert of its errors
-    var error_code = error.code
-    var error_message = error.message
+    // User data update of Balance and interest by day change
+      let dayscurr = Math.round(Date.now() / minute);
+      let dayslast = Math.round(datelogin / minute);
+    if(dayscurr>dayslast)
+    {
+      day_change= (dayscurr-dayslast)*0.037/100*total_bal;
 
-    alert(error_message)
-  })
+    
+      var user_data = {
+        last_login : Date.now(),
+        total_bal : Math.trunc(total_bal+day_change),
+        total_int : Math.trunc(total_int+day_change),
+        day_change : Math.trunc(day_change)
+      }
+    }
+    else{
+      var user_data = {
+        last_login : Date.now(),
+        total_bal : total_bal,
+        total_int : total_int
+      }
+    }
+
+      // Push to Firebase Database
+      database_ref.child('users/' + user.uid).update(user_data)
+
+      })
+      .catch(function(error) {
+        // Firebase will use this to alert of its errors
+        var error_code = error.code
+        var error_message = error.message
+
+        alert(error_message)
+      })
+
+      })
+  
 }
 
 
