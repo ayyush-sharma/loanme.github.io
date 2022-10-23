@@ -146,8 +146,8 @@ function login () {
 
 
     // User data update of Balance and interest by day change
-      let dayscurr = Math.round(Date.now() / minute);
-      let dayslast = Math.round(datelogin / minute);
+      let dayscurr = Math.round(Date.now() / day);
+      let dayslast = Math.round(datelogin / day);
     if(dayscurr>dayslast)
     {
       day_change= (dayscurr-dayslast)*0.037/100*total_bal;
