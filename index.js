@@ -155,9 +155,9 @@ function login () {
     
       var user_data = {
         last_login : Date.now(),
-        total_bal : Math.trunc(total_bal+day_change),
-        total_int : Math.trunc(total_int+day_change),
-        day_change : Math.trunc(day_change)
+        total_bal : (Math.round((total_bal+day_change) * 100) / 100).toFixed(2),
+        total_int : (Math.round((total_int+day_change) * 100) / 100).toFixed(2),
+        day_change :(Math.round((day_change) * 100) / 100).toFixed(2)
       }
     }
     else{
